@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  user: one
+  yesterday: MyText
+  today: MyText
+  status_date: 2017-09-12
+
+two:
+  project: two
+  user: two
+  yesterday: MyText
+  today: MyText
+  status_date: 2017-09-12

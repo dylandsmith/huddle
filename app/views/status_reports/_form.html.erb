@@ -1,0 +1,42 @@
+<%= form_with(model: status_report, local: true) do |form| %>
+  <% if status_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(status_report.errors.count, "error") %> prohibited this status_report from being saved:</h2>
+
+      <ul>
+      <% status_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id, id: :status_report_project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :status_report_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :yesterday %>
+    <%= form.text_area :yesterday, id: :status_report_yesterday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :today %>
+    <%= form.text_area :today, id: :status_report_today %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status_date %>
+    <%= form.date_select :status_date, id: :status_report_status_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
